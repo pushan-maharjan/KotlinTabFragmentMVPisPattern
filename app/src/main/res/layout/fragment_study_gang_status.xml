@@ -1,17 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
-        android:id='@+id/gangstatus'
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Gang Status"
-        android:textStyle="normal"
-        android:fontFamily="sans-serif"
-        android:textSize="32sp"
-        android:textColor="@android:color/black"
-        android:gravity="center"/>
+        android:id="@+id/fragment_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="false"
+        android:text="Top Study Gang"
+        android:layout_marginTop="14dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/top_gang_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_heading"
+        android:visibility="visible"
+        android:layout_marginTop="14dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <EditText
+        android:id="@+id/et_search_gang"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:hint="Search Other Gangs"
+        android:padding="8dp"
+        android:layout_marginLeft="15dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/et_search_gang"
+        android:text="Search"
+        android:layout_marginLeft="15dp"/>
 </RelativeLayout>
