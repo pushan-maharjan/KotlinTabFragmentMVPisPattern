@@ -8,18 +8,17 @@ import com.example.turing.tabfragment2.StudyGang.ViewPagerAdpater
 import kotlinx.android.synthetic.main.activity_sudy_gang_main_activity.*
 
 class StudyGangMainActivity : AppCompatActivity(), IStudyGangMainActivity {
-    private var presenter: StudyGangPresenter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_sudy_gang_main_activity)
-    setSupportActionBar(toolbar)
-    var adapter = ViewPagerAdpater(supportFragmentManager)
-    adapter.addFragment(GangStatusFragment(), "Gang Status")
-    adapter.addFragment(GangPostFragment(), "Posts")
-    adapter.addFragment(MyGangFragment(), "My Gang")
-    viewPager.adapter = adapter
-    tabs.setupWithViewPager(viewPager)
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_sudy_gang_main_activity)
+        setSupportActionBar(toolbar)
+        var adapter = ViewPagerAdpater(supportFragmentManager)
+        adapter.addFragment(GangStatusFragment(), "Gang Status")
+        adapter.addFragment(GangPostFragment(), "Posts")
+        adapter.addFragment(MyGangFragment(), "My Gang")
+        viewPager.adapter = adapter
+        tabs.setupWithViewPager(viewPager)
     }
     override fun initView() {
 

@@ -1,6 +1,6 @@
 package com.example.turing.tabfragment2.StudyGang.GangAdapter
 
-import android.content.Context
+import android.support.v4.app.FragmentActivity
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,7 +8,7 @@ import com.example.turing.tabfragment2.R
 import com.example.turing.tabfragment2.StudyGang.GangAdapter.AdapterPresenter.TopStudyGangListPresenter
 import com.example.turing.tabfragment2.StudyGang.GangAdapter.AdapterViewHolder.TopGang.TopGangViewHolder
 
-class TopGangLIstAdapter(private val presenter: TopStudyGangListPresenter, private val context: Context) : RecyclerView.Adapter<TopGangViewHolder>() {
+class TopGangLIstAdapter(private var presenter: TopStudyGangListPresenter, private var context: FragmentActivity?) : RecyclerView.Adapter<TopGangViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TopGangViewHolder {
         return TopGangViewHolder(LayoutInflater.from(context)

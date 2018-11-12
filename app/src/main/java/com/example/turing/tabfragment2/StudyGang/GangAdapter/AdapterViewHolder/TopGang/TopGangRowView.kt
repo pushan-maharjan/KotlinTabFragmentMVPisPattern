@@ -1,6 +1,7 @@
 package com.example.turing.tabfragment2.StudyGang.GangAdapter.AdapterViewHolder.TopGang
 
 interface TopGangRowView {
+    fun setRank(rank: Int)
     fun setStudyGangName(gangName: String)
     fun setMemberCount(gangMemberCount: Int)
     fun setStudyGangLeader(gangLeader: String)

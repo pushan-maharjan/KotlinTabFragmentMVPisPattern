@@ -1,16 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <Button
+        android:id="@+id/createGang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/button_shapes"
+        android:textColor="#fff"
+        android:text="Create my Gang" />
 
     <TextView
+        android:id="@+id/fragment_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/createGang"
+        android:layout_marginTop="10dp"
+        android:text="My Gangs"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <View
+        android:id="@+id/viewline"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="My Gang"
-        android:textStyle="normal"
-        android:fontFamily="sans-serif"
-        android:textSize="32sp"
-        android:textColor="@android:color/black"
-        android:gravity="center"/>
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/fragment_heading"
+        android:background="@android:color/darker_gray" />
+
+    <!--<ScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/viewline">-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_gang_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewline"
+        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior" />
+
 
 </RelativeLayout>

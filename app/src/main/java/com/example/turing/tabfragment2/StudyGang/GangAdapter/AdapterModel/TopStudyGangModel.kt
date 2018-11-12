@@ -5,6 +5,7 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class TopStudyGangModel(
+    var rank: Int,
     var gangName: String,
     var gangMemberCount: Int,
     var gangPostCount: Int,
