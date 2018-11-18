@@ -19,6 +19,12 @@ class MainActivity : AppCompatActivity() {
 //
 //            MainActivity.instance.startActivity(clickintent)
         }
+        button2.setOnClickListener {
+            startActivity(Intent(this, GangProfileActivity::class.java))
+//            var clickintent: Intent = Intent(MainActivity.instance, StudyGangMainActivity::class.java)
+//
+//            MainActivity.instance.startActivity(clickintent)
+        }
     }
 
 //    companion object {

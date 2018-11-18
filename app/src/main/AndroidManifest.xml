@@ -16,12 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".StudyGang.GangView.StudyGangMainActivity" >
-            <!--Default Intent Filter-->
+        <activity android:name=".StudyGang.GangView.StudyGangMainActivity">
+
+            <!-- Default Intent Filter -->
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".StudyGang.GangView.GangProfileActivity"></activity>
     </application>
 
 </manifest>

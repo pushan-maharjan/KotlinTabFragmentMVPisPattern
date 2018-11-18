@@ -4,29 +4,33 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <Button
+        android:id="@+id/search"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/button_shapes"
+        android:textColor="#fff"
+        android:text="Search" />
+
     <EditText
         android:id="@+id/et_search_gang"
-        android:layout_width="250dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/search"
         android:hint="Search Other Gangs"
         android:padding="8dp"
         android:drawableLeft="@drawable/search"
         android:backgroundTint="@color/colorPrimaryDark"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="2dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginRight="2dp"
-        android:layout_toRightOf="@+id/et_search_gang"
-        android:background="@drawable/button_shapes"
-        android:textColor="#fff"
-        android:text="Search" />
+
 
     <TextView
         android:id="@+id/fragment_heading"
@@ -34,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/et_search_gang"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:text="Top Study Gangs"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/colorPrimaryDark" />
@@ -47,10 +51,6 @@
         android:layout_below="@+id/fragment_heading"
         android:background="@android:color/darker_gray" />
 
-    <!--<ScrollView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_below="@+id/viewline">-->
     <android.support.v7.widget.RecyclerView
         android:id="@+id/top_gang_list"
         android:layout_width="match_parent"
@@ -58,5 +58,4 @@
         android:layout_below="@+id/viewline"
         app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior" />
 
-    <!--</ScrollView>-->
 </RelativeLayout>

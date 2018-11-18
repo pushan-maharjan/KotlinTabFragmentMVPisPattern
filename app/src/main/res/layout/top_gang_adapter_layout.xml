@@ -1,103 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="wrap_content">
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:id="@+id/relative_all">
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp">
-        <LinearLayout
+        android:layout_marginTop="15dp"
+        android:elevation="20dp">
+
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:layout_marginBottom="10dp">
 
-            <TextView
-                android:id="@+id/rank"
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_launcher_background"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#E98721"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <Button
+                android:id="@+id/join"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:text="join"
+                android:textAllCaps="true"
+                android:textSize="15dp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/join_button"/>
+
+            <RelativeLayout
+                android:id="@+id/relative_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginBottom="15dp"
-                android:includeFontPadding="false"
-                android:gravity="center"
-                android:textSize="50dp" />
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/join"
+                android:layout_toRightOf="@+id/profile_image">
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="98dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@android:color/darker_gray" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <de.hdodenhof.circleimageview.CircleImageView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/profile_image"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:src="@drawable/ic_launcher_background"
-                    app:civ_border_width="2dp"
-                    app:civ_border_color="#E98721"/>
-
-                <LinearLayout
+                <TextView
+                    android:id="@+id/gang_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginLeft="10dp">
-                    <TextView
-                        android:id="@+id/gang_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ISOP Gang"
-                        android:textSize="17dp"
-                        android:layout_marginBottom="5dp"/>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="("
-                            android:textSize="17dp"/>
-                        <TextView
-                            android:id="@+id/gang_member"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="200"
-                            android:textSize="17dp"
-                            android:layout_marginRight="7dp"
-                            android:drawableLeft="@drawable/member"/>
-                        <TextView
-                            android:id="@+id/gang_posts"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="200"
-                            android:textSize="17dp"
-                            android:drawableLeft="@drawable/posts"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=")"
-                            android:textSize="17dp"/>
-                    </LinearLayout>
+                    android:text="ISOP Gang"
+                    android:textSize="20dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"/>
 
-                    <TextView
-                        android:id="@+id/gang_leader"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Leader: Milan Rai"
-                        android:textSize="20dp"
-                        />
-                </LinearLayout>
-            </LinearLayout>
+                <ImageView
+                    android:id="@+id/dot_separator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/dot_seperator"
+                    android:layout_toRightOf="@+id/gang_name"
+                    android:layout_marginRight="5sp"
+                    android:layout_marginTop="8.5dp"/>
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/gang_leader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Milan Rai"
+                    android:textSize="15dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_toRightOf="@+id/dot_separator" />
+
+                <TextView
+                    android:id="@+id/bracket_open"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="("
+                    android:layout_below="@+id/gang_name"
+                    android:textSize="15dp"/>
+
+                <TextView
+                    android:id="@+id/gang_member"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="200"
+                    android:layout_toRightOf="@+id/bracket_open"
+                    android:layout_below="@+id/gang_name"
+                    android:textSize="15dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center_vertical"
+                    android:drawableLeft="@drawable/member"/>/
+
+                <TextView
+                    android:id="@+id/gang_posts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="200"
+                    android:textSize="15dp"
+                    android:drawableLeft="@drawable/posts"
+                    android:layout_toRightOf="@+id/gang_member"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/gang_name"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=")"
+                    android:textSize="15dp"
+                    android:layout_below="@id/gang_name"
+                    android:layout_toRightOf="@id/gang_posts"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bracket_open"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15dp"
+                    android:lines="2"
+                    android:text="This is the discription about this gang that you are a memeber of. So please read this properly. This is the discription about this gang that you are a memeber of. So please read this properly."/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
 
     </android.support.v7.widget.CardView>
 </RelativeLayout>
